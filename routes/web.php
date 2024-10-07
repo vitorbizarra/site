@@ -2,4 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', \App\Livewire\Counter::class);
+Route::get('/', \App\Livewire\Index::class);
