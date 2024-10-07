@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 export default {
   presets: [
@@ -9,7 +11,12 @@ export default {
     "./vendor/tallstackui/tallstackui/src/**/*.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['"Montserrat"', ...defaultTheme.fontFamily.sans],
+        'mono': ['"Roboto Mono"', ...defaultTheme.fontFamily.mono],
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
