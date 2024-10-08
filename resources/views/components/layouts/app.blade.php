@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" 
+    x-data="tallstackui_darkTheme('dark-theme', true)"
+    x-bind:class="{ 'dark bg-zinc-900': darkTheme, 'bg-zinc-100': !darkTheme }">
 
 <head>
     @include('googletagmanager::head')
